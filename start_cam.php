@@ -1,0 +1,1 @@
+exec('python /html/camera_save.py');

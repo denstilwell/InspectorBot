@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+<style>
+ body {background-color: green;
+    font-family: verdana;
+    font-size: 100%;
+    border: 1px solid black;
+}
+h1   {color: black;}
+p    {color: red;}
+
+</style>
+<style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {background-color: #008CBA;} /* Blue */
+.button2 {background-color: #f44336;} /* Red */ 
+.button2 {font-size: 20px;}
+</style>
+    <script src="/ajax/jquery.min.js"></script>
+    <script type = "text/javascript">
+function forward () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/forward.php',              // <=== CALL THE PHP FUNCTION HERE.               
+        });
+}
+function stop () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/stop.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function reverse () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/reverse.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function left () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/left.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function right () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/right.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function right_slow () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/right_slow.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function left_slow () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/left_slow.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function uplon () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/uplon.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function uploff () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/uploff.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function flon () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/flon.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function floff () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/floff.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+function start_cam () {
+$.ajax( { type : 'POST',
+          data : { },
+          url  : 'commands/start_cam.php',              // <=== CALL THE PHP FUNCTION HERE.
+         });
+}
+    </script>
+  </head>
+  <body>
+<h1 align="center">Welcome to InspectorBot's Control Webpage!</h1>
+
+ <a href="http://192.168.2.3:8081/">
+<img src="http://192.168.2.3:8081/" ></a>
+<a href="http://192.168.2.3:8082/">
+<img src="http://192.168.2.3:8082/" ></a>
+ 
+</div>
+
+<div class="btn-group" style="text-align:center">
+ 
+	<button type="button" class="button button1" onclick="flon()">forward lights on</button>
+	<button type="button" class="button button1"  onclick="floff()">forward lights off </button>
+	<button type="button" class="button button1" onclick="uplon()">upward pointing lights on</button>
+	<button type="button" class="button button1" onclick="uploff()">upward pointing lights off</button>
+
+</div>
+
+<div class="btn-group" style="text-align:center">
+	<button type="button" class="button button1" onclick="left_slow()">left slow</button>
+	<button type="button" class="button button1"  onclick="forward()">forward</button>
+	<button type="button" class="button button1" onclick="right_slow()">right slow</button>
+</div>
+
+<div class="btn-group" style="text-align:center">
+        <button type="button" class="button button1" onclick="left()">left</button>
+ 	<button type="button" class="button button2" onclick="stop()">stop</button>
+        <button type="button" class="button button1" onclick="right()">right</button>  
+</div>
+
+<div class="btn-group" style="text-align:center">
+   	<button type="button" class="button button1" onclick="reverse()">reverse</button>
+</div>
+
+  
+  </body>
+
+</html>
